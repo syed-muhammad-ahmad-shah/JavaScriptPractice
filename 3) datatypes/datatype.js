@@ -42,10 +42,11 @@ var name = {first:"Jane", last:"Doe"};                  // object
 // Objects can have attribute. Attribute are properties of objects. Attribute are stored in object as variable definitions
 
 const personWithAttribute = {
-    firstName: "John",
-    lastName : "Doe",
-    id       : 5566
+    firstName: "John",  //Object ( attributes)
+    lastName : "Doe",   //Object ( attributes)
+    id       : 5566     //Object ( attributes)
 }
+
 // • Object ( methods)
 // Objects can also have methods. Methods are actions that can be performed on objects. Methods are stored in object as function definitions
 const personWithMethods = {
@@ -55,20 +56,48 @@ const personWithMethods = {
   };
 
 // ⭐ Array
-var sheets = ["HTML","CSS","JS"];                       // array
+// Arrays are used to store multiple values in a single variable. This is compared to a variable that can store only one value. Each item in an array has a number attached to it, called a numeric index, that allows you to access it. In JavaScript, arrays start at index zero and can be manipulated with various methods.
+const sheets = ["HTML","CSS","JS"];                       // array
 
 // ⭐ Boolean (True/ False)
+// In JavaScript, a boolean value is one that can either be TRUE or FALSE. If you need to know “yes” or “no” about something, then you would want to use the boolean function.
 var truth = true;                                       // boolean (true)
 var truth = false;                                      // boolean (false)
 
 // ⭐ Undefined
+// The undefined property indicates that a variable has not been assigned a value, or not declared at all.
 var a;                                                  // undefined
 var a = undefined;                                      // undefined
 
 // ⭐ Null
+// 'Null' is a keyword in JavaScript that signifies 'no value' or nonexistence of any value. If you wish to shred a variable off its assigned value, you can simply assign 'null' to it. Besides this, like any other object, it is never implicitly assigned to a variable by JavaScript.
 var a = null;                                           // value null
 
 // ⭐ Nan
+// In JavaScript, NaN is short for "Not-a-Number". In JavaScript, NaN is a number that is not a legal number.
+const bird = "crow"
+const color = "black"
+const total = bird + color
+console.log(total)      //NaN = Not a number
 
 // ⚡ Undefined Vs Null Vs Nan ⚡
+// ⭐ Undefined
+// The undefined property indicates that a variable has not been assigned a value, or not declared at all.
+
+// ⭐ Null
+// 'Null' is a keyword in JavaScript that signifies 'no value' or nonexistence of any value. If you wish to shred a variable off its assigned value, you can simply assign 'null' to it. Besides this, like any other object, it is never implicitly assigned to a variable by JavaScript.
+
+typeof null          // "object" (not "null" for legacy reasons)
+typeof undefined     // "undefined"
+null === undefined   // false
+null  == undefined   // true
+null === null        // true
+null  == null        // true
+!null                // true
+isNaN(1 + null)      // false
+isNaN(1 + undefined) // true
+
+// ⭐ Nan
+// In JavaScript, NaN is short for "Not-a-Number". In JavaScript, NaN is a number that is not a legal number.
+
 
