@@ -118,11 +118,11 @@ const alphabet = "abcdefghijklmnopqrstuvwxyz"
 // 9️⃣ replace()/replaceAll()	          //replaces a string with another string
 // 🔟 substring(start,end)	           //returns a part of a string
 // 1️⃣1️⃣ substr(start, length)          //returns a part of a string
-// 1️⃣2️⃣includes()	                     //searches for a string and returns a boolean value
-// 1️⃣3️⃣search()	                       //searches for a string returns a position of a match
+// 1️⃣2️⃣ includes()	                   //searches for a string and returns a boolean value
+// 1️⃣3️⃣ search()	                     //searches for a string returns a position of a match
 // 1️⃣4️⃣ valueOf()                      //Returns primitive value of a string object
-// 1️⃣5️⃣ String.length                  //Returns the length of a string:
-// 1️⃣6️⃣ padStart()/ padEnd()           //Returns the length of a string:
+// 1️⃣5️⃣ String.length                  //Returns the length of a string
+// 1️⃣6️⃣ padStart()/ padEnd()           //Returns the length of a string
 
 
 // 1️⃣ concat()	              //joins two or more strings
@@ -228,9 +228,225 @@ const result18 = text1.length
 console.log(result18)       //5   
 
 // 1️⃣6️⃣ padStart()         //The padStart() method pads a string with another string
-const str1 = '123';
-console.log(str1.padStart(6, "*")); // "***123"
+const str1 = '123'
+console.log(str1.padStart(6, "*")) // "***123"
 
 // padEnd()               //The padStart() method pads a string with another string
-const str2 = '123';
-console.log(str2.padEnd(6, "*")); // "123***"
+const str2 = '123'
+console.log(str2.padEnd(6, "*")) // "123***"
+
+
+
+let stuff = ['A', 'B', 'C', 'D', 'E', 'F'] // test array
+
+// 🟥 JS Array Methods	🟥
+
+// 1️⃣ stuff.pop()                        // removes the last item in the array (returns what was removed)
+// 2️⃣ stuff.shift()                      // removes the first item in the array (returns what was removed)
+// 3️⃣ stuff.push("G")                    // adds an item to the end of the array (returns the new length of the array)
+// 4️⃣ stuff.unshift("Z")                 // adds an item to the beginning of the array (returns the new length of the array)
+// 5️⃣ stuff.indexOf("C")                 // returns the index number of the item in the array
+// 6️⃣ stuff.splice(2)                    // gets rid of the index item and after it (returns what was removed)
+//  stuff.splice(2,2)                    // second argument determines how many items are removed in total (including index) (returns what was removed)
+//  stuff.splice(2,0,"Hello")            // inserts item "hello" into index number 2 and shifts other items ahead (removing 0 items) (returns what was removed)
+//  stuff.splice(2,3,"Hello")            // removes 3 items (including index number 2 and after) and inserts "hello" into index number 2 (returns what was removed)
+// 7️⃣ stuff.slice(2)                     // same as splice but doesn't modify the original array (returns what would be removed)
+// 8️⃣ stuff.toString()                   // returns the combination of elements of the array into a string
+// 9️⃣ stuff.join("-")                    // works the same as toString() but the argument determines what is between each element in the string
+// 1️⃣0️⃣ stuff.reverse()                 // reverses an array's elements (returns same thing)
+// 1️⃣1️⃣ stuff.includes("G")             // returns "true" if the item is located in the array and returns false if not
+// 1️⃣2️⃣ stuff.at(-1)                    // returns the item corresponding to index, same as stuff[argument] if argument is positive but if it is negative it is the same as stuff[stuff.length + argument]
+// 1️⃣3️⃣ stuff.length                    // Returns the length of an Array
+// 1️⃣4️⃣ delete stuff[index]             // Deletes an array elements
+// 1️⃣5️⃣ stuff.concat(['G', 'H', 'I'])   // returns the combination of array "stuff" with the array argument
+// 1️⃣6️⃣ array.sort()                    // The sort() method sorts an array alphabetically
+// 1️⃣7️⃣ array.map(function/ operation)  // creates a new array from calling a function for every array element.
+// 1️⃣8️⃣ array.filter(function/ operation) // creates a new array filled with elements that pass a test provided by a function.
+// 1️⃣9️⃣ array.forEach()                   // loop over array by executing a provided callback function for each element in an array.
+// 2️⃣0️⃣ array.every() //  checks every element in the array that passes the condition, returning true or false .
+
+
+// 1️⃣ stuff.pop()                   // removes the last item in the array (returns what was removed)
+stuff.pop() // removes the last item in the array (returns what was removed)
+//stuff = ['A', 'B', 'C', 'D', 'E']
+//return: ['F'] 
+
+// 2️⃣ stuff.shift()                 // removes the first item in the array (returns what was removed)
+stuff.shift() // removes the first item in the array (returns what was removed)
+//stuff = ['B', 'C', 'D', 'E', 'F']
+//return: ['A']
+
+// 3️⃣ stuff.push("G")               // adds an item to the end of the array (returns the new length of the array)
+stuff.push("G") // adds an item to the end of the array (returns the new length of the array)
+//stuff = ['B', 'C', 'D', 'E', 'F', 'G']
+//return: 6      //array length
+
+// 4️⃣ stuff.unshift("A")            // adds an item to the beginning of the array (returns the new length of the array)
+stuff.unshift("A") // adds an item to the beginning of the array (returns the new length of the array)
+//stuff = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+//return: 7     //array length
+
+// 5️⃣ stuff.indexOf("C")            // returns the index number of the item in the array
+stuff.indexOf("C") // returns the index number of the item in the array
+//return: 2
+
+// 6️⃣ stuff.splice(2)               // gets rid of the index item and after it (returns what was removed)
+stuff.splice(2) // gets rid of the index item and after it (returns what was removed)
+//stuff = ['A', 'B']
+//return: ['C', 'D', 'E', 'F']
+
+stuff = ['A', 'B', 'C', 'D', 'E', 'F'] // test array
+// stuff.splice(2,2)             // second argument determines how many items are removed in total (including index) (returns what was removed)
+stuff.splice(2,2) // second argument determines how many items are removed in total (including index) (returns what was removed)
+//stuff = ['A', 'B', 'E', 'F']
+//return: ['C', 'D']
+
+//  stuff.splice(2,0,"Hello")     // inserts item "hello" into index number 2 and shifts other items ahead (removing 0 items) (returns what was removed)
+stuff.splice(2,0,"Hello") // inserts item "hello" into index number 2 and shifts other items ahead (removing 0 items) (returns what was removed)
+//stuff = ['A', 'B', 'Hello', 'C', 'D', 'E', 'F']
+//return: []
+
+stuff = ['A', 'B', 'C', 'D', 'E', 'F'] // test array
+//  stuff.splice(2,3,"Hello")     // removes 3 items (including index number 2 and after) and inserts "hello" into index number 2 (returns what was removed)
+stuff.splice(2,3,"Hello") // removes 3 items (including index number 2 and after) and inserts "hello" into index number 2 (returns what was removed)
+//stuff = ['A', 'B', 'Hello', 'F']
+//return: ['C', 'D', 'E']
+
+stuff = ['A', 'B', 'C', 'D', 'E', 'F'] // test array
+// 7️⃣ stuff.slice(2)                 // same as splice but doesn't modify the original array (returns what would be removed)
+//  stuff.slice(2)                // same as splice but doesn't modify the original array (returns what would be removed)
+stuff.slice(2) // same as splice but doesn't modify the original array (returns what would be removed)
+//stuff = ['A', 'B', 'C', 'D', 'E', 'F']
+//return: ['C', 'D', 'E', 'F']
+
+// 8️⃣ stuff.toString()               // returns the combination of elements of the array into a string
+stuff.toString() // returns the combination of elements of the array into a string
+//stuff = ['A', 'B', 'C', 'D', 'E', 'F']
+//return: "A,B,C,D,E,F"
+
+// 9️⃣ stuff.join("-")                // works the same as toString() but the argument determines what is between each element in the string
+stuff.join("-") // works the same as toString() but the argument determines what is between each element in the string
+//stuff = ['A', 'B', 'C', 'D', 'E', 'F']
+ //return: "A-B-C-D-E-F"
+ 
+ // 1️⃣0️⃣ stuff.reverse()             // reverses an array's elements (returns same thing)
+ stuff.reverse() // reverses an array's elements (returns same thing)
+ console.log(stuff)
+ //stuff = ['F', 'E', 'D', 'C', 'B', 'A']
+ //return: []
+ 
+ // 1️⃣1️⃣ stuff.includes("G")         // returns "true" if the item is located in the array and returns false if not
+ stuff.includes("G") // returns "true" if the item is located in the array and returns false if not
+ //return: false
+ 
+ stuff = ['A', 'B', 'C', 'D', 'E', 'F'] // test array
+ 
+ // 1️⃣2️⃣ stuff.at(index)                // returns the item corresponding to index, same as stuff[argument] if argument is positive but if it is negative it is the same as stuff[stuff.length + argument]
+ stuff.at(-1) // returns the item corresponding to index, same as stuff[argument] if argument is positive but if it is negative it is the same as stuff[stuff.length + argument]
+ //return: 'F'
+ 
+ stuff.at(-2) // returns the item corresponding to index, same as stuff[argument] if argument is positive but if it is negative it is the same as stuff[stuff.length + argument]
+ //return: 'E'
+ 
+ stuff.at(0) // returns the item corresponding to index, same as stuff[argument] if argument is positive but if it is negative it is the same as stuff[stuff.length + argument]
+ //return: 'A'
+ 
+ stuff.at(1) // returns the item corresponding to index, same as stuff[argument] if argument is positive but if it is negative it is the same as stuff[stuff.length + argument]
+ //return: 'B'
+ 
+ // 1️⃣3️⃣ stuff.length               //Returns the length of a Array
+ stuff.length
+ // return:  6
+ 
+ // 1️⃣4️⃣ delete stuff[index]         // Deletes an array elements
+ let body = delete stuff[0] //Deleting elements leaves undefined holes in an array
+ // stuff = [ <1 empty item>, 'B', 'C', 'D', 'E', 'F' ]
+ // return: []
+ 
+ // 1️⃣5️⃣ stuff.concat(['G', 'H', 'I']) // returns the combination of array "stuff" with the array argument
+ stuff.concat(['G', 'H', 'I']) // returns the combination of array "stuff" with the array argument
+ //stuff = ['A', 'B', 'C', 'D', 'E', 'F']
+ //return: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+ 
+ const Girls = ["Cecilia", "Lone"]
+ const Boys = ["Emil", "Tobias", "Linus"]
+ 
+ Girls.concat(Boys)
+ // Girls = [ 'Cecilia', 'Lone' ]
+ // return: [ 'Cecilia', 'Lone', 'Emil', 'Tobias', 'Linus' ]
+ 
+ const fruits = ["Banana", "Orange", "Apple", "Mango"] // test array
+ console.log(fruits)
+ 
+ // 1️⃣6️⃣ array.sort()                  // The sort() method sorts an array alphabetically
+ fruits.sort()
+ //  fruits = [ 'Apple', 'Banana', 'Mango', 'Orange' ]
+ //  return:  [ 'Apple', 'Banana', 'Mango', 'Orange' ]
+ 
+ // array sorting a number
+ const points = [40, 100, 1, 5, 25, 10]   // test array
+ points.sort()                            //[ 1, 10, 100, 25, 40, 5 ]
+ //Ascending order
+ points.sort(function(a, b){return a - b})//[ 1, 5, 10, 25, 40, 100 ]
+ 
+ // Descending order
+ points.sort(function(a, b){return b - a})//[ 100, 40, 25, 10, 5, 1 ]
+ 
+ // sorting randomly
+ points.sort(function(){return 0.5 - Math.random()})
+ 
+ // Finding highest and lowest number
+ points.sort(function(a, b){return a - b})
+
+// now points[0] contains the lowest value
+let lowest = points[0]                //1
+
+// and points[points.length-1] contains the highest value
+let highest = points[points.length-1] //100
+
+// 1️⃣7️⃣ array.map(function/ operation) // creates a new array from calling a function for every array element.
+// Example 1
+let arr = [1, 2, 3, 4, 5, 6]  // test array
+const mapped = arr.map(element => element + 30)
+console.log(mapped) // [31, 32, 33, 34, 35, 361
+
+// Example 2
+const numbers = [65, 44, 12, 4]
+const newArr = numbers.map(myFunction) // [ 650, 440, 120, 40 ]
+console.log(newArr)
+function myFunction(num) {
+  return num * 10
+}
+
+// 1️⃣8️⃣ array.filter(function/ operation) // creates a new array filled with elements that pass a test provided by a function.
+arr = [1, 2, 3, 4, 5, 6]   // test array
+// Example 1
+const filtered = arr.filter(element => element === 2 || element === 4)
+console.log(filtered) // [2, 4]
+
+// Example 2
+const ages = [32, 33, 16, 40]
+const result = ages.filter(checkAdult)
+function checkAdult(age) {
+  return age >= 18
+}
+
+// 1️⃣9️⃣ array.forEach() // loop over array by executing a provided callback function for each element in an array.
+arr = [1, 2, 3]   // test array
+arr.forEach(element => {
+  console.log (element)
+});
+// 1
+// 2
+// 3
+
+
+// 2️⃣0️⃣ array.every() //  checks every element in the array that passes the condition, returning true or false .
+arr = [1, 2, 3, 4, 5, 6]   // test array
+// all elements are greater than 5
+const greaterFive = arr.every(num => num > 5)
+console. log(greaterFive) // false
+// all elements are less than 9
+const lessNine = arr.every(num => num < 9);
+console. log(lessNine); // true
+
