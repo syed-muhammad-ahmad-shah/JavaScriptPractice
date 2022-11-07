@@ -450,3 +450,57 @@ console. log(greaterFive) // false
 const lessNine = arr.every(num => num < 9);
 console. log(lessNine); // true
 
+// 🔴 JS Number Methods	🔴
+
+
+//1️⃣ toString()	    Returns a number as a string
+//2️⃣ toExponential()	Returns a number written in exponential notation
+//3️⃣ toFixed()	      Returns a number written with a number of decimals
+//4️⃣ toPrecision()	  Returns a number written with a specified length
+//5️⃣ ValueOf()	      Returns a number as a number
+
+//1️⃣ toString()	    Returns a number as a string
+let x = 123
+x.toString()          //123
+// (123).toString()      //123
+// (100 + 23).toString() //123
+
+//2️⃣ toExponential()	Returns a number written in exponential notation
+x = 9.656;
+console.log(x.toExponential(2))
+console.log(x.toExponential(4))
+console.log(x.toExponential(6))
+// 9.66e+0
+// 9.6560e+0
+// 9.656000e+0
+
+//3️⃣ toFixed()	      Returns a number written with a number of decimals
+x = 9.656;
+console.log(x.toFixed(0))
+console.log(x.toFixed(2))
+console.log(x.toFixed(4))
+console.log(x.toFixed(6))
+// 10
+// 9.66
+// 9.6560
+// 9.656000
+
+//4️⃣ toPrecision()	  Returns a number written with a specified length
+x = 9.656;
+console.log(x.toPrecision())
+console.log(x.toPrecision(2))
+console.log(x.toPrecision(4))
+console.log(x.toPrecision(6))
+// 9.656
+// 9.7
+// 9.656
+// 9.65600
+
+//5️⃣ ValueOf()	      Returns a number as a number
+ x = 123;
+console.log(x.valueOf())
+console.log((123).valueOf())
+console.log((100 + 23).valueOf())
+// 123
+// 123
+// 123
