@@ -74,6 +74,17 @@ document.getElementById("div9").onmouseup = function() {
 // 🟢 onkeyup
 // The user releases a key
 
+// ⭐ Getting Specific Key 
+const keyBoard = document.querySelector('.inputTag')
+
+keyBoard.addEventListener('keydown', e =>{
+    // if(e.keyCode === 50 || e.keyCode === 90){
+    //     document.getElementById("div_2").innerHTML = "Sorry! You cant use " + e.key 
+    //     e.preventDefault()
+    // }
+        document.getElementById("div_2").innerHTML = "<b> Key: </b>" + e.key + "<b> Key Code: </b>" + e.keyCode 
+})
+
 // ⭐ Frame:
 
 // 🟥 onabort
