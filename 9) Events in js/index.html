@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h1>Events in JS</h1>
+    </div>
+    <section class="container">
+
+    <h2>⭐ Mouse Events ⭐</h2>
+
+    <h3>🔵 onclick</h3>
+    <p>The event occurs when the user clicks on an element</p>
+    <div  id="div" class="button">CLick Me (onclick)</div>
+    
+    <h3>🔵 oncontextmenu</h3>
+    <p>User right-clicks on an element to open a context menu</p>
+    <div  id="div1" class="button">Right CLick Me (oncontextmenu)</div>
+    
+    <h3>🔵 ondblclick</h3>
+    <p> The user double-clicks on an element</p>
+    <div  id="div2" class="button">Double CLick Me (ondblclick)</div>
+    
+    <h3>🔵 onmousedown</h3>
+    <p>User presses a mouse button over an element</p>
+    <div  id="div3" class="button">CLick Me (onmousedown)</div>
+    
+    <h3>🔵 onmouseenter</h3>
+    <p>The pointer moves onto an element</p>
+    <div  id="div4" class="button">Hover over Me (onmouseenter)</div>
+    
+    <h3>🔵 onmouseleave</h3>
+    <p>Pointer moves out of an element</p>
+    <div  id="div5" class="button">Hover over Me (onmouseleave)</div>
+    
+    <h3>🔵 onmousemove</h3>
+    <p>The pointer is moving while it is over an element</p>
+    <div  id="div6" class="button">Move over Me (onmousemove)</div>
+    
+    <h3>🔵 onmouseover</h3>
+    <p>When the pointer is moved onto an element or one of its children</p>
+    <div  id="div7" class="button">Hover Over Me (onmouseover)</div>
+    
+    <h3>🔵 onmouseout</h3>
+    <p>User moves the mouse pointer out of an element or one of its children</p>
+    <div  id="div8" class="button">Hover Over Me (onmouseout)</div>
+    
+    <h3>🔵 onmouseup</h3>
+    <p>The user releases a mouse button while over an element</p>
+    <div  id="div9" class="button">CLick Me (onmouseup)</div>
+       
+    <h2>⭐ Keyboard ⭐</h2>
+    <h3>🟢 onkeydown</h3>
+    <p>When the user is pressing a key down</p>
+    <div class="button button-keyboard">Press any key</div>
+    <input id="key" type="text" onkeydown="fun()">
+
+    <h3>🟢 onkeypress</h3>
+    <p>The moment the user starts pressing a key</p>
+    <div class="button button-keyboard">Press any key</div>
+    <input id="key1" type="text" onkeypress="fun()">
+
+    <h3>🟢 onkeyup</h3>
+    <p>The user releases a key</p>
+    <div class="button button-keyboard">Press any key</div>
+    <input id="key2" type="text" onkeyup="fun()">
+    
+    <h2>⭐ Form Events ⭐</h2>
+
+        <h3>🔻 onfocus</h3>
+        <p> An element gets focus</p>
+        <div class="button button-form" id="div_1">Select the input field</div>
+        <input id="inputTxt" type="text" onfocus = "fun1()">
+        
+        <h3>🔻 onfocusin</h3>
+        <p>When an element is about to get focus</p>
+        <div class="button button-form" id="div_2">Select the input field</div>
+        <input type="text" onfocusin  = "fun2()">
+        
+        <h3>🔻 oninput</h3>
+        <p>User input on an element</p>
+        <div class="button button-form">Type anything in input field</div>
+        <input type="text" oninput  = "fun()">
+        
+        <h3> 🔻 onfocusout</h3>
+        <p>When the element is about to lose focus</p>
+        <div class="button button-form">Type anything in input field</div>
+        <input type="text" onfocusout  = "fun()">
+
+        <h3>🔻 oninvalid</h3>
+        <p>An element is invalid</p>
+        <div class="button button-form">Type and submit the form</div>
+        <form >
+            <input type="text" required oninvalid  = "fun()">
+            <input type="submit" >
+        </form>
+
+        <h3>🔻 onreset</h3>
+        <p>A form is reset</p>
+        <div class="button button-form">reset the form</div>
+        <form onreset = "fun()" >
+            <input type="text" required >
+            <input type="reset" >
+        </form>
+
+        <h3>🔻 onsearch</h3>
+        <p>The user writes something in a search field </p>
+        <div class="button button-form">Type anything in input field</div>
+        <input type="search" onsearch = "fun()">
+
+        <h3>🔻 onselect</h3>
+        <p> The user selects some text </p>
+        <div class="button button-form">Type anything than select it</div>
+        <input type="text" onselect = "fun()">
+        
+        <h3> 🔻 onsubmit</h3>
+        <p>A form is submitted</p>
+        <div class="button button-form">submit the form</div>
+        <form onsubmit = "fun()" >
+            <input type="text"  >
+            <input type="submit" >
+        </form>
+
+        <h2>⭐ Clipboard⭐</h2>
+        
+        <h3>🟣 oncopy</h3>
+        <p>User copies the content of an element</p>
+        <div class="button button-clipboard" >Copy the text</div>
+        <input type="text" value="Lorem ipsum dolor sit amet." oncopy = "fun()">
+        
+        <h3>🟣 oncut</h3>
+        <p>User cuts the content of an element</p>
+        <div class="button button-clipboard" >Cut the text</div>
+        <input type="text" value="Lorem ipsum dolor sit amet." oncut = "fun()">
+        
+        <h3>🟣 onpaste</h3>
+        <p>User pastes the content of an element</p>
+        <div class="button button-clipboard" >Paste the text</div>
+        <input type="text"  onpaste = "fun()">
+
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

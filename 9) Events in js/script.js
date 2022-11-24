@@ -1,39 +1,72 @@
 // ⚡ Events in js ⚡
-
+function fun() {  
+    alert("Greetings");  
+    }  
 // ⭐ Mouse:
 // 🔴 onclick
 // The event occurs when the user clicks on an element
+document.getElementById("div").onclick = function() {
+    fun()
+}
 
 // 🔴 oncontextmenu
 // User right-clicks on an element to open a context menu
+document.getElementById("div1").oncontextmenu = function() {
+    fun()
+}
 
 // 🔴 ondblclick
 // The user double-clicks on an element
+document.getElementById("div2").ondblclick = function() {
+    fun()
+}
 
 // 🔴 onmousedown
 // User presses a mouse button over an element
+document.getElementById("div3").onmousedown = function() {
+    fun()
+}
 
 // 🔴 onmouseenter
 // The pointer moves onto an element
+document.getElementById("div4").onmouseenter = function() {
+    fun()
+}
 
 // 🔴 onmouseleave
 // Pointer moves out of an element
+document.getElementById("div5").onmouseleave = function() {
+    fun()
+}
 
 // 🔴 onmousemove
 // The pointer is moving while it is over an element
+document.getElementById("div6").onmousemove = function() {
+    fun()
+}
 
 // 🔴 onmouseover
 // When the pointer is moved onto an element or one of its children
+document.getElementById("div7").onmouseover = function() {
+    fun()
+}
 
 // 🔴 onmouseout
 // User moves the mouse pointer out of an element or one of its children
+document.getElementById("div8").onmouseout = function() {
+    fun()
+}
 
 // 🔴 onmouseup
 // The user releases a mouse button while over an element
+document.getElementById("div9").onmouseup = function() {
+    fun()
+}
 
 // ⭐ Keyboard:
 // 🟢 onkeydown
 // When the user is pressing a key down
+
 
 // 🟢 onkeypress
 // The moment the user starts pressing a key
@@ -82,9 +115,19 @@
 
 // 🔻 onfocus
 // An element gets focus
+function fun1() {
+    document.getElementById("div_1").innerHTML = " Event Triggered"
+}
+
+// document.getElementById("inputTxt")onfocus = function() {
+//     fun()
+// }
 
 // 🔻 onfocusin
 // When an element is about to get focus
+function fun2() {
+    document.getElementById("div_2").innerHTML = " Event Triggered"
+}
 
 // 🔻 onfocusout
 // The element is about to lose focus
