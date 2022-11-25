@@ -33,6 +33,9 @@ const object = new ObjectLayout();
 console.log(object.firstName) // Ahmad;
 console.log(object.sayHi()) // "Hello from Larry"
 
+// 3) Another way of creating an object:
+const obj1 = new Object();
+obj1.name = 'John'
 
 //🌞Example
 let testSymbol = Symbol('item number 3')
@@ -43,9 +46,6 @@ const obj = {
   	['a']: 4
 }
 
-// Another way of creating an object:
-const obj1 = new Object();
-obj1.name = 'John'
 
 // 🌟Accessing value
 // To access values, you can use 1️⃣ dot notation or 2️⃣ bracket notation. 
