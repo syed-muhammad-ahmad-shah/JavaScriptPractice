@@ -82,7 +82,7 @@ keyBoard.addEventListener('keydown', e =>{
     //     document.getElementById("div_2").innerHTML = "Sorry! You cant use " + e.key 
     //     e.preventDefault()
     // }
-        document.getElementById("div_2").innerHTML = "<b> Key: </b>" + e.key + "<b> Key Code: </b>" + e.keyCode 
+        document.getElementById("div_3").innerHTML = "<b> Key: </b>" + e.key + "<b> Key Code: </b>" + e.keyCode 
 })
 
 // ⭐ Frame:
